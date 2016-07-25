@@ -3,7 +3,7 @@ body {
 	overflow-x:hidden;
   height: 100%;
   margin: 10px;
-  width: 750px;
+  width: 800px;
 }
 
 a {
@@ -17,17 +17,25 @@ a:hover {
 }
 
 .left {
-	float: left;
+	position: fixed;
+  text-align:center;
   padding: 20px 0;
 	width: 300px;
 }
 
 .right {
-	float: left;
-	width: 440px;
-	height: 500px;
+	float: right;
+	width: 480px;
+	min-height: 500px;
 	margin-left: 10px;
-	overflow-x: hidden;
+	overflow: hidden;
+}
+.right:after {
+  content: "";
+  width: 0px;
+  height: 500px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #dcard_photo {
@@ -47,6 +55,7 @@ button {
   white-space: nowrap;
   border: 1px solid transparent;
   padding: 0 16px;
+  margin: 0 50px;
   outline: none;
   font-size: 14px;
   background: #3397cf;
@@ -63,10 +72,11 @@ button:disabled {
 table {
   background-color: transparent;
   border-spacing: 0;
-  width: 100%;
+  width: 450px;
   margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: middle;
 }
-
 
 tr {
   line-height: 23px;
@@ -80,4 +90,11 @@ th {
 }
 td {
   padding: 5px;
+}
+iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }

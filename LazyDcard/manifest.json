@@ -2,22 +2,32 @@
     "manifest_version": 2,
     "name": "LazyDcard",
     "description": "專門開Dcard用的擴充套件。",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "author": "TCC",
-    "homepage_url": "http://github.com/TCCinTaiwan",
+    "homepage_url": "http://github.com/TCCinTaiwan/LazyDcard",
     "browser_action": {
         "default_icon": "images/icon-19.png",
         "default_popup": "popup.html"
     },
+    // "background" : {
+    //     "scripts" : [
+    //         "background.js"
+    //     ],
+    //     "persistent" : true
+    // },
     "icons": {
         "128": "images/icon-128.png"
     },
     "permissions": [
-        "*://www.dcard.tw/*"
+        "*://*.dcard.tw/*",
+        "tabs",
+        "alarms"
     ],
     "options_ui": {
         "chrome_style": true,
-        "page": "options.htm"
+        "page": "options.htm",
+        "open_in_tab": false
     },
-    "content_security_policy": "script-src 'self'; object-src 'self'"
+    // "default_locale": "zh",
+    "content_security_policy": "default-src 'self' https://photos.dcard.tw https://www.dcard.tw/dcard; connect-src *; script-src 'self';"
 }
